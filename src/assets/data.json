@@ -1,0 +1,59 @@
+[
+  {
+    "Num": 1,
+    "Image": "assets/F1.png",
+    "Name": "أحمد محمود",
+    "SubTitle": "0123456789",
+    "NumTicket": "C-101",
+    "PriceTicket": "$40",
+    "Cinema": "سينما مصر , مول العرب , برج الأطنان , سرايا القبة ...",
+    "NumPeople": 1,
+    "NumPurchases": "مرة واحدة",
+    "Icon": "assets/ticket.png",
+    "NamePdf": "تذكرة رقم 45.pdf",
+    "TitlePdf": "9mb . PDF"
+  },
+  {
+    "Num": 1,
+    "Image": "assets/F2.png",
+    "Name": "محمد الغريب",
+    "SubTitle": "0123456789",
+    "NumTicket": "C-102",
+    "PriceTicket": "$30",
+    "Cinema": "سينما مصر , مول العرب , برج الأطنان , سرايا القبة",
+    "NumPeople": 1,
+    "NumPurchases": "مرة واحدة",
+    "Icon": "assets/ticket.png",
+    "NamePdf": "تذكرة رقم 45.pdf",
+    "TitlePdf": "9mb . PDF"
+  },
+  {
+    "Num": 3,
+    "Image": "assets/F3.png",
+    "Name": "محمد الغريب",
+    "SubTitle": "0123456789",
+    "NumTicket": "C-103",
+    "PriceTicket": "$45",
+    "Cinema": "سينما مصر , مول العرب , برج الأطنان , سرايا القبة",
+    "NumPeople": 1,
+    "NumPurchases": "مرة واحدة",
+    "Icon": "assets/ticket.png",
+    "NamePdf": "تذكرة رقم 45.pdf",
+    "TitlePdf": "9mb . PDF"
+  },
+  {
+    "Num": 4,
+    "Image": "assets/F4.png",
+    "Name": "محمد الغريب",
+    "SubTitle": "0123456789",
+    "NumTicket": "C-104",
+    "PriceTicket": "$54",
+    "Cinema": "سينما مصر , مول العرب , برج الأطنان , سرايا القبة",
+    "NumPeople": 1,
+    "NumPurchases": "مرة واحدة",
+    "Icon": "assets/ticket.png",
+    "NamePdf": "تذكرة رقم 45.pdf",
+    "TitlePdf": "9mb . PDF"
+  }
+
+]

@@ -1,0 +1,193 @@
+<div class="ticket-container" style="background-color: rgba(232, 232, 232, 1)">
+  <div class="ticket-section">
+<nav class="navbar">
+  <div class="container-fluid">
+    <button class="btn btn-outline-light " type="submit">
+      <span class="me-3">تعديل</span>
+      <i class="fa-solid fa-pen-to-square"></i>
+    </button>
+    <form class="d-flex" role="search">
+      <h3 class="me-2" >تذكرة رقم #2342</h3>
+      <button class="btn btn-outline-light " type="submit"><i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </form>
+  </div>
+</nav>
+
+<div class="ticket-body mb-3 ">
+  <div class="cardd rounded" style="background-color: rgba(138, 116, 249, 1);">
+    <div class="card-bodyy">
+      <p class="text-center mt-3"style="color: rgba(255, 255, 255, 1)"><i class="fa-solid fa-trash-can" ></i>عرض التذكرة الخاصة بالفيلم</p>
+      
+      <div class="box-div rounded" style="background-color: white; margin-left: 60px; width: 60%;">
+        <div class="d-flex pt-3 ps-5">
+          <i class="fa-regular fa-clone" style="color: rgba(138, 116, 249, 1);"></i>
+          <p class="text-w ml-2" style="font-size: 12px; font-weight: bold; color: rgba(28, 28, 40, 1);">www.tazkty.com/473847</p>
+        </div>
+      </div>
+      <p class="text-center mt-3" style="color: rgba(255, 255, 255, 1); ">فعال حتي 15 يوليو 2023</p>
+      <p style="border-style: dashed; color: rgba(255, 255, 255, 0.4);"></p>
+      <div class="d-flex align-items-center">
+        <img src="assets/qr.png" alt="Image" class="ms-5">
+        <div class="ml-auto">
+          <p class="text-right me-3">خصم
+            <br>   <button class="btn btn-outline-light" >مشاركة<i class="fa-regular fa-paper-plane fa-flip-horizontal"></i>
+            </button>
+            <span class="text-right ms-3 me-1">25%</span>
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chart-container rounded ms-4" style="background-color: rgba(255, 255, 255, 1);">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <button style="background: rgba(232, 232, 232, 1)" class="btn dropdown-toggle ms-3"  [dir]="isRightToLeft ? 'rtl' : 'ltr'" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              سنويا
+            </button>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="navbar-right ml-auto me-4">
+        <h6 class="text-right" style="color: rgba(28, 28, 40, 1)">إحصائيات إستخدام القسيمة</h6>
+        <p class="text-right" style="color: rgba(146, 161, 173, 1);">05 يوليو , 2023 - 05 أغسطس , 2023</p>
+      </div>
+    </nav>
+    <p-chart type="line" [data]="data" [options]="options"></p-chart>
+  </div>
+</div>
+
+<div class="ticket-center rounded">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button type="button" class="btn" style="background:rgba(138, 116, 249, 1); color:rgba(252, 252, 252, 1);
+      ;">حجز تذكرة جديدة</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" style="color: rgba(156, 157, 159, 1);" aria-current="page" href="#">مفعلة
+              <i class="fa-solid fa-toggle-off" style="color: rgba(138, 116, 249, 1);"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="navbar-icons ">
+          <i class="fa-solid fa-sliders me-2 p-2 rounded" style="background-color:rgba(255, 255, 255, 1); color: rgba(139, 139, 139, 1);" ></i>
+          <i class="fa-solid fa-right-left me-2 p-2 rounded" style="background-color:rgba(255, 255, 255, 1); color: rgba(139, 139, 139, 1);"></i>
+        </div>
+                <form class="d-flex" role="search">
+          <div class="card flex flex-wrap justify-content-center gap-3">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText [(ngModel)]="value" placeholder="بحث عن ..." [dir]="isRightToLeft ? 'rtl' : 'ltr'" />
+            </span>
+        </div>
+        <a class="navbar-brand ms-3" href="#">مبيعات التذاكر</a>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+  </div>
+<div class="ticket-footer">
+<p-table
+      #dt
+      [value]="filteredData"
+      [tableStyle]="{ 'min-width': '75rem' }"
+      [customSort]="true"
+      responsiveLayout="stack"
+      [dir]="isRightToLeft ? 'rtl' : 'ltr'"
+    >
+      <ng-template pTemplate="header">
+        <tr style="background-color: bisque;">
+          <th>#</th>
+          <th >
+            <div>
+              المستخدم
+            </div>
+          </th>
+
+          <th>
+            رقم التذكرة
+          </th>
+          <th>
+            قيمى التذكرة<p-sortIcon field="closingDate"></p-sortIcon>
+          </th>
+          <th>
+            السينمات
+          </th>
+          <th>
+            عدد الأشخاص
+          </th>
+          <th>
+            عدد مرات الشراء
+          </th>
+          <th>
+            التذكرة
+          </th>
+
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-data let-rowIndex="rowIndex">
+        <tr>
+          <td>{{ data.Num}}</td>
+          <td>
+            <div class="container-name-img">
+              <div class="image" >
+                <img src="{{ data.Image }}" />
+              </div>
+              <div class="text">
+                <h3>
+                  {{ data.Name }}
+                </h3>
+                <p>
+                  {{ data.SubTitle }}
+                </p>
+              </div>
+            </div>
+          </td>
+          <td>{{ data.NumTicket}}</td>
+          <td>{{ data.PriceTicket }}</td>
+          <td>{{ data.Cinema }}</td>
+          <td>{{ data.NumPeople }}</td>
+          <td>{{ data.NumPurchases }}</td>
+          <td><div class="container-pdf-img">
+            <div class="image" >
+              <img src="{{ data.Icon }}" />
+            </div>
+            <div class="text">
+              <h3>
+                {{ data.NamePdf }}
+              </h3>
+              <p>
+                {{ data.TitlePdf }}
+              </p>
+            </div>
+          </div></td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+<div class="card flex flex-column gap-3">
+      <div class="flex align-items-center justify-content-center">
+        <div class="justify-content-end">
+          <p-paginator (onPageChange)="onPageChange($event)" [dir]="isRightToLeft ? 'rtl' : 'ltr'" [first]="first1" [rows]="rows1" [totalRecords]="120" [showFirstLastIcon]="false" class="paginator"></p-paginator>
+        </div>
+        <div class="flex-1">
+        </div>
+          <div>
+            <span>عرض
+              <p-dropdown [options]="statusOptions"  [(ngModel)]="selected" class="custom-dropdown"></p-dropdown>
+              من اصل 250</span>
+          </div>
+      </div>
+</div>
+</div>
+</div>

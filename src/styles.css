@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~@fortawesome/fontawesome-free/css/all.css';
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center !important;
+}
+.p-datatable .p-datatable-thead > tr > th {
+  text-align: center !important;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: rgba(138, 116, 249, 1) !important;
+  border-radius: 5px !important;
+}
+h1{
+  margin: 0 !important;
+}
+.cardd {
+  width: 30% !important;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .cardd {
+    width: 80% !important; /* Adjust the width for smaller screens */
+  }
+  .box-div{
+    width: 10% !important;
+  }
+  .chart-container {
+    width: 70% !important;
+  }
+  .box-div .fa-regular{
+    font-size: 5px !important;
+  }
+  .box-div .text-w{
+    font-size: 5px !important;
+  }
+}
